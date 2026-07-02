@@ -333,7 +333,7 @@ abbr#imagem.resize{
     left: 8%;
     display: grid;
     grid-template-columns: 42% 1fr 41%;
-    grid-template-rows: 45% 1fr 24%;
+    grid-template-rows: 34% 1fr 35%;
     width: 410px;
     height: 370px;
     justify-items: center;
