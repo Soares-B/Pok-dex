@@ -236,6 +236,8 @@ document.querySelector('#pokemonSearch').addEventListener('submit', (e) =>{ // -
     pokemonValue = document.querySelector('#pokemonEntry').value
     document.querySelector('#pokemonEntry').value = ''
     pokemonSearch(pokemonValue)
+    const list = document.querySelector("#suggestions");
+    list.innerHTML = ''
 })
 
 // --------------------------------------------------------Setas-------------------------------------------------------------------------------------------------------------------------
