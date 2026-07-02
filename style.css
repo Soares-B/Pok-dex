@@ -296,8 +296,8 @@ abbr#imagem{
 
 abbr#imagem.resize{
     position: absolute;
-    top: 13%;
-    left: 40%;
+    top: 14%;
+    left: 44%;
     scale: 3;
 }
 
@@ -604,8 +604,8 @@ abbr#imagem.resize{
 
     abbr#imagem.resize {
         position: absolute;
-        top: 7%;
-        left: 36%;
+        top: 10%;
+        left: 38%;
         scale: 5;
     }
 
