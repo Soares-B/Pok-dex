@@ -597,6 +597,13 @@ abbr#imagem.resize{
         top: 28%;
     }
 
+    abbr#imagem.resize {
+        position: absolute;
+        top: 22%;
+        left: 45%;
+        scale: 4;
+    }
+
     #image{
         max-width: 50px;
         max-height: 50px;
