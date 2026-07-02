@@ -93,7 +93,7 @@ body{
 }
 
 .esquerda#imagem.resize.active{
-    transform: translateX(-300px);
+    transform: translateX(-99px);
 }
 
 .esquerda#bg.active, .esquerda#shiny.active, .esquerda#bulbapedia.active, .esquerda#random.active{
@@ -277,23 +277,28 @@ form{
 
 abbr#imagem{
     position: absolute;
-    top: 20%;
+    top: 22%;
     left: 40%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     scale: 3;
 }
 
 #image{
-    min-width: 25px;
-    min-height: 25px;
-    max-width: 256px;
-    max-height: 256px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 abbr#imagem.resize{
     position: absolute;
-    top: 5%;
-    left: 25%;
-    scale: 1;
+    top: 13%;
+    left: 40%;
+    scale: 3;
 }
 
 #bg{
@@ -593,15 +598,15 @@ abbr#imagem.resize{
     }
 
     abbr#imagem {
-        left: 44%;
-        top: 28%;
+        left: 37%;
+        top: 18%;
     }
 
     abbr#imagem.resize {
         position: absolute;
-        top: 22%;
-        left: 45%;
-        scale: 4;
+        top: 7%;
+        left: 36%;
+        scale: 5;
     }
 
     #image{
