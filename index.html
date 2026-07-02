@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="info">
+        <!--Images-->
+        <img src="Images/Default.png" alt="" id="card" class="esquerda"> <!--    Carta    -->
+        <abbr title="" id="imagem" class="esquerda"><img src="#" alt="" id="image"></abbr> <!--    Pokemon    -->
+        <img src="#" alt="" id="bg" class="esquerda"> <!--    Carta fundo    -->
+
+        <img src="Images/CardBack.png" alt="" id="back" class="direita"> <!--    Atras    -->
+
+        <img src="" alt="" id="previouspokemon" class="direita information bimage"><!--    Anterior    -->
+        <img src="" alt="" id="nextpokemon" class="direita information bimage"><!--    Posterior    -->
+
+        <div id="pokemonsprites" class="direita information">
+            <img src="" alt="" id="frontpokemon" class="direita information bimage"><!--    front    -->
+            <img src="" alt="" id="frontshinypokemon" class="direita information bimage"><!--    front shiny    -->
+            <img src="" alt="" id="backpokemon" class="direita information bimage"><!--    back    -->
+            <img src="" alt="" id="backshinypokemon" class="direita information bimage"><!--    back shiny    -->
+        </div>
+        
+        
+        <!--Buttons-->
+        <form action="SearchPokemon" id="pokemonSearch"><!--    principais    -->
+            <input type="text" name="pokemon entry" id="pokemonEntry" placeholder="Pokemon Name" autocomplete="off" class="esquerda">
+            <input type="submit" value="Search" id="submit" class="button esquerda">
+            <input type="button" value="Info" id="stats" class="button esquerda" onclick="move(this)">
+        </form>
+
+        <input type="button" value="&#9734" id="favorite" class="button esquerda hide" onclick="favorite()">
+        <input type="button" value="Favorited" id="getfavorite" class="button esquerda hide" onclick="getFavorite()">
+
+        <input type="button" value="Make it Shiny!" id="shiny" class="button esquerda hide" onclick="shiny()">
+
+        <input type="button" value="Information" id="bulbapedia" class="button esquerda hide" onclick="bulbapedia()">
+
+        <input type="button" value="Random" id="random" class="button esquerda hide" onclick="random()">
+
+        <ul id="suggestions" class="text esquerda"></ul> <!--    sugestões    -->
+
+        <abbr title="Previous Pokemon" class="esquerda"><input type="button" value="&#8636" id="left" class="esquerda hide" onclick="previousPokemon()"></abbr> <!--    Pokemon    -->
+        <abbr title="Next Pokemon" class="esquerda"><input type="button" value="&#8640" id="right" class="esquerda hide" onclick="nextPokemon()"></abbr>
+
+        <abbr title="Previous Sprite" class="esquerda"><input type="button" value="&#8636" id="spriteleft" class="esquerda hide" onclick="changeSprite(this)"></abbr> <!--    Sprite    -->
+        <abbr title="Next Sprite" class="esquerda"><input type="button" value="&#8640" id="spriteright" class="esquerda hide" onclick="changeSprite(this)"></abbr>
+
+        <!--Text-->
+        <p id="pokemonname" class="up text esquerda"></p> <!--    nome    -->
+        <p id="versionname" class="up text esquerda"></p>
+
+        <p id="favoritename" class="up text esquerda"></p>
+
+        <p class="up text esquerda" id="ability1"></p>
+        <p class="up text esquerda" id="ability2"></p>
+        <p class="up text description esquerda" id="description1"></p>
+        <p class="up text description esquerda" id="description2"></p>
+        
+        <p class="text direita information" id="previoustext">Previous</p>
+        <p class="text direita information" id="previousname"></p>
+        <p class="text direita information" id="nexttext">Next</p>
+        <p class="text direita information" id="nextname"></p>
+
+        <p class="text direita information" id="frontname"></p>
+        <p class="text direita information" id="frontshinyname"></p>
+        <p class="text direita information" id="backname"></p>
+        <p class="text direita information" id="backshinyname"></p>
+
+        <p id="madeby">Made by <a href="https://github.com/Soares-B" target="_blank" rel="nofollow">Bruno</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
