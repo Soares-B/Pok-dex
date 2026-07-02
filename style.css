@@ -333,7 +333,7 @@ abbr#imagem.resize{
     left: 8%;
     display: grid;
     grid-template-columns: 42% 1fr 41%;
-    grid-template-rows: 34% 1fr 34%;
+    grid-template-rows: 45% 1fr 24%;
     width: 410px;
     height: 370px;
     justify-items: center;
@@ -604,7 +604,7 @@ abbr#imagem.resize{
 
     #bg{
         top: 4%;
-        left: 1%;
+        left: 2.5%;
         scale: 1;
     }
 
@@ -614,17 +614,17 @@ abbr#imagem.resize{
 
     #ability1, #ability2 {
         font-size: 10px;
-        left: 13%;
+        left: 17%;
 
     }
 
     .description {
-        width: 288px;
+        width: 318px;
         height: 41px;
     }
 
     #versionname {
-        width: 280px;
+        width: 300px;
         font-size: 8px;
     }
     
@@ -673,8 +673,8 @@ abbr#imagem.resize{
     }
 
     #pokemonsprites {
-        width: 274px;
-        height: 242px;
+        width: 302px;
+        height: 267px;
     }
 
     #previoustext{
@@ -688,11 +688,11 @@ abbr#imagem.resize{
     
     #previousname, #nextname, #frontname, #frontshinyname, #backname, #backshinyname{
         width: 100px;
-        left: 10%;
+        left: 12%;
     }
 
     #nextname, #backname, #backshinyname{
-        left: 59%;
+        left: 61%;
     }
 
     #frontname, #backname {
