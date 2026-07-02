@@ -213,7 +213,7 @@ form{
     position: absolute;
     top: -1.2%;
     left: .6%;
-    width: 56.5%;
+    width: 55.5%;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -506,7 +506,7 @@ abbr#imagem.resize{
     }
 
     .text{
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .button{
@@ -570,9 +570,9 @@ abbr#imagem.resize{
     }
 
     #suggestions{
-        top: -1.2%;
+        top: -2%;
         left: -.5%;
-        width: 62.5%;
+        width: 56%;
         height: 60px;
     }
 
