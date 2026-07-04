@@ -669,6 +669,14 @@ abbr#imagem.resize{
     animation: effect 1.5s ease forwards;
 }
 
+#effect.show.inverso{
+    left: 100%;
+}
+
+#effect.show.active{
+    left: -20%;
+}
+
 @keyframes effect{
     0% {
         opacity: 1;
