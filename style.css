@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root{
     --white-transparency: #ffffff79;
     --black-transparency: #0000006b;
@@ -70,7 +72,7 @@ body{
 }
 
 .esquerda, .direita{
-    transition: 1s;
+    transition: transform 1s, z-index 0s 1s;
 }
 
 /* ------ */
@@ -87,7 +89,6 @@ body{
     transform: translateX(-230px);
 }
 
-
 .esquerda#imagem.active{
     transform: translateX(-100px);
 }
@@ -96,7 +97,7 @@ body{
     transform: translateX(-99px);
 }
 
-.esquerda#bg.active, .esquerda#shiny.active, .esquerda#bulbapedia.active, .esquerda#random.active{
+.esquerda#bg.active, .esquerda#shiny.active, .esquerda#bulbapedia.active, .esquerda#random.active, .esquerda#saved-button.active{
     transform: translateX(-231px);
 }
 
@@ -110,6 +111,43 @@ body{
 
 .esquerda#spriteleft.active, .esquerda#spriteright.active{
     transform: translateX(-400px);
+}
+
+
+.esquerda.inverso{
+    transform: translateX(300px);
+}
+
+.esquerda#pokemonEntry.inverso{
+    transform: translateX(200px);
+}
+
+.esquerda#stats.inverso, .esquerda#submit.inverso{
+    transform: translateX(230px);
+}
+
+.esquerda#imagem.inverso{
+    transform: translateX(100px);
+}
+
+.esquerda#imagem.resize.inverso{
+    transform: translateX(99px);
+}
+
+.esquerda#bg.inverso, .esquerda#shiny.inverso, .esquerda#bulbapedia.inverso, .esquerda#random.inverso, .esquerda#saved-button.inverso{
+    transform: translateX(231px);
+}
+
+.esquerda#favorite.inverso{
+    transform: translateX(250px);
+}
+
+.esquerda#getfavorite.inverso{
+    transform: translateX(230px);
+}
+
+.esquerda#spriteleft.inverso, .esquerda#spriteright.inverso{
+    transform: translateX(400px);
 }
 
 /* ------ */
@@ -126,8 +164,29 @@ body{
     transform: translateX(0px);
 }
 
+.direita.inverso{
+    transition: 0s;
+    z-index: -5;
+}
+
+.direita#back.inverso{
+    z-index: -5;
+}
+
+/* ------ */
+
 .information{
-    z-index: -3;
+    z-index: -4;
+    transition: transform 1s, z-index 0s;
+}
+
+.information.active{
+    z-index: 1;
+    transition: transform 1s, z-index 0s 1s;
+}
+
+.information.inverso{
+    z-index: -6;
 }
 
 .bimage{
@@ -200,6 +259,13 @@ form{
 }
 
 #getfavorite{
+    position: absolute;
+    top: 45%;
+    left: 40.5%;
+    width: 100px;
+}
+
+#saved-button{
     position: absolute;
     top: 11%;
     left: 11%;
@@ -332,6 +398,10 @@ abbr#imagem.resize{
     left: 65%;
 }
 
+#previouspokemon:hover, #nextpokemon:hover{
+    cursor: pointer;
+}
+
 #pokemonsprites{
     position: absolute;
     top: 41%;
@@ -391,6 +461,94 @@ abbr#imagem.resize{
     color: var(--black-transparency);
 }
 
+.saved{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    pointer-events: none;
+    transition: transform 1s, z-index 0s, pointer-events 1s;
+}
+
+#favorite-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.saved.visible{
+    transform: translateX(-200px);
+    z-index: 1;
+    pointer-events: auto;
+    transition: transform 1s, z-index 0s 1s, pointer-events 0s 1s;
+}
+
+.saved.active{
+    transform: translateX(-300px);
+    z-index: -3;
+}
+
+.saved > div{
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 455px;
+    height: 645px;
+    display: flex;
+    gap: 4%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
+}
+
+#principal div{
+    background: #80808059;
+    border: 3px solid #808080;
+    margin-left: 6%;
+    margin-top: 5%;
+    border-radius: 25px;
+}
+
+#principal div:hover{
+    cursor: pointer;
+    color: rgb(17, 0, 255);
+}
+
+#principal img{
+    width: 175px;
+    height: 175px;
+    transition: .3s;
+}
+
+#principal img:hover{
+    transform: translateY(-15px);
+}
+
+#principal p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -20%;
+}
+
+#principal::-webkit-scrollbar{
+    width: 10px;
+}
+
+#principal::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+#principal::-webkit-scrollbar-thumb{
+    background-color: var(--black-transparency);
+    border-radius: 5px;
+}
+
+
 /* ----------------------------------------------------------------------------------------Text----------------------------------------------------------------------------------------*/
 
 #pokemonname{
@@ -410,7 +568,7 @@ abbr#imagem.resize{
 
 #favoritename{
     position: absolute;
-    top: 52.5%;
+    top: 52%;
     left: 7%;
 }
 
@@ -497,6 +655,32 @@ abbr#imagem.resize{
     text-decoration: underline;
 }
 
+#effect{
+    display: none;
+}
+
+#effect.show{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    color: rgba(255, 255, 255, 0.096);;
+    font-size: 20px;
+    animation: effect 1.5s ease forwards;
+}
+
+@keyframes effect{
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
 /* ------------------------------------------------------------------------------------Resoluções--------------------------------------------------------------------------------------*/
 
 @media(max-width: 600px){
@@ -536,7 +720,7 @@ abbr#imagem.resize{
         transform: translateX(0px);
     }
 
-    .esquerda#bg.active, .esquerda#shiny.active, .esquerda#bulbapedia.active, .esquerda#random.active{
+    .esquerda#bg.active, .esquerda#shiny.active, .esquerda#bulbapedia.active, .esquerda#random.active, .esquerda#saved-button.active{
         transform: translateX(0px);
     }
 
@@ -550,6 +734,34 @@ abbr#imagem.resize{
 
     .esquerda#spriteleft.active, .esquerda#spriteright.active{
         transform: translateX(0px);
+    }
+
+    .esquerda.inverso{
+        opacity: 0%;
+        transform: translateX(0px);
+        pointer-events: none; 
+    }
+
+    .esquerda#imagem.inverso, .esquerda#imagem.resize.inverso,
+    .esquerda#bg.inverso, .esquerda#shiny.inverso, .esquerda#bulbapedia.inverso,
+    .esquerda#random.inverso, .esquerda#saved-button.inverso,
+    .esquerda#favorite.inverso, .esquerda#getfavorite.inverso,
+    .esquerda#spriteleft.inverso, .esquerda#spriteright.inverso{
+        transform: translateX(0px);
+        pointer-events: none;
+    }
+
+    .esquerda#saved-button.active, .esquerda#pokemonEntry.inverso, .esquerda#submit.inverso, .esquerda#stats.inverso, .esquerda#saved-button.inverso{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+
+    .esquerda#saved-button.inverso{
+        pointer-events: all;
+    }
+
+    .direita.inverso{
+        pointer-events: none;
     }
 
     .direita.active{
@@ -586,7 +798,7 @@ abbr#imagem.resize{
     }
 
     #stats{
-        right: 10%;
+        right: 12%;
     }
     
     #info{
@@ -644,8 +856,16 @@ abbr#imagem.resize{
         scale: 1;
     }
 
-    #getfavorite{
-        left: 8%;
+    #getfavorite {
+        top: 44%;
+        left: 36%;
+        width: 100px;
+    }
+
+    #saved-button{
+        top: -6.3%;
+        left: 85%;
+        width: 75px;
     }
 
     #bulbapedia {
@@ -690,11 +910,11 @@ abbr#imagem.resize{
     }
 
     #previoustext{
-        left: 20%;
+        left: 19%;
     }
 
      #nexttext {
-        left: 72%;
+        left: 71%;
     }
 
     
@@ -720,4 +940,38 @@ abbr#imagem.resize{
         font-size: 14px;
     }
 
+
+    .saved.active{
+        transform: translateX(0px);
+        z-index: -6;
+    }
+    .saved.visible{
+        transform: translateX(0px);
+    }
+
+    .saved > div{
+        width: 90%;
+        height: 92%;
+        left: 5%;
+        gap: 3%;
+    }
+
+    #principal div{
+        margin-left: 12%;
+        margin-top: 4%;
+    }
+
+    #principal img{
+        width: 90px;
+        height: 90px;
+    }
+
+    #principal p{
+        font-size: 12px;
+        margin-top: -25%;
+    }
+
+    #effect.show{
+        font-size: 16px;
+    }
 }
