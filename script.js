@@ -365,8 +365,6 @@ function favorite(){ // --------------------------------------------------------
         efeito.classList.remove('show')
     })
     localStorage.setItem("Favoritos", JSON.stringify(listFavorite))
-    
-    console.log(listFavorite)
 
     const lastFavorite = pokemon.pokeInfo
     localStorage.setItem("Last Favorite", JSON.stringify(lastFavorite))
@@ -603,6 +601,4 @@ async function pokemonSearch(pokemonEntry){ // ---------------------------------
     }else{
         document.querySelector('#favorite').value = '☆'
     }
-    
-    console.log(pokemon, favoritos, star)
 }
